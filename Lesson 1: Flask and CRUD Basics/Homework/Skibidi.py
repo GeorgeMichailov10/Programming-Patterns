@@ -10,6 +10,8 @@ mongo = PyMongo(app)
 #mongo.db.create_collection('users')
 
 # Route for creating sets
+# NOTE: I see that you're storing the length. That is completely unnecessary in this case since the sets are so small. Just call len(list) to get.
+# NOTE: Why are you returning the whole object when you can just return the id of the set? Debugging right?
 @app.route('/user', methods=['POST'])
 def create_user():
     data = request.json
@@ -37,7 +39,9 @@ def create_user():
         return jsonify({"error" : str(e)}), 500
 
 
-# # Route for update password
+# # Route for update password <- Huh?
+# NOTE: Make two separate routes for adding and removing. Removing pops, up to you if you want to pop from the front or the back idrc. Adding appends
+# NOTE: $set is for changing things. You are appending to a list  when adding so using $push.
 @app.route('/user', methods=['PUT'])
 def update_password():
     data = request.json
@@ -65,6 +69,10 @@ def update_password():
         return jsonify({"error": str(e)})
 
 
+# NOTE: Please fix the function names and comments because it so hard to read.
+# NOTE: setData is a terrible name because it looks like that's what you're trying to set the data to.
+# NOTE: Your keys need to be consistent. You can't have message be dynamic. It should be something like "equation" : and then you can have a dynamic value
+# The whole point of key: value in maps is so that you can look in a consistent place for dynamic data.
 # Route for getting a user
 @app.route('/user', methods=['GET'])
 def get_user():
