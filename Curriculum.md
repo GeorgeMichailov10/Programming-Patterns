@@ -5,7 +5,6 @@
 ### Web Development (Beginner)
 1. Web Dev with Mongo and Flask
 2. Multiple Entities and User Auth in Flask
-3. FastAPI and Basic Async Programming in Web Dev
 
 ### Concurrency with Python
 4. Concurrency with async vs threading vs processes
@@ -15,7 +14,7 @@
 6. Machine Learning Fundamentals of a Neural Net (Build from scratch, diagram)
 7. Build micrograd by Andrej Karpathy
 8. Build name predictor using neural nets (project day)
-9. CNN on the MNIST dataset (project day)
+9. CNN on cats vs dogs and then the MNIST dataset for HW
 10. Training techniques (Batch norm, grad clipping, fp precision, weight decay, learning rate scheduling, fused optimizer, kaiming weight initialization, hyperparameter tuning)
 11. Transfer Learning (CIFAR with ResNet)
 
@@ -27,7 +26,7 @@
 16. Basic GAN on MNIST
 
 ### Backend and Scaling
-16. API Rate limiting and Security, Caching with Redis
+16. FastAPI, API Rate limiting and Security, Caching with Redis
 17. Background jobs with celery, handling and processing file uploads
 18. GraphQL with FastAPI
 
