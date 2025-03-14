@@ -1,0 +1,33 @@
+Concurrency vs Parallelism
+- Parallelism is a subset of concurrency.
+- Parallelism is the simultaneous execution of different tasks.
+- Concurrency is multitasking, not necessarily in a parallel manner.
+- Parallelism is hard in Python because in other languages, the parallelism could be achieved
+through multithreading and hence much easier to communicate between threads + resource sharing,
+but in Python, have to deal with complex interprocess communication.
+
+Threading vs Multiprocessing vs async
+- Threading: Works within same process, so shared state, memory, and resources.
+- Multiprocessing: Creating separate processes with their own memory and resources for more efficient execution.
+- Async: Allows tasks to be executed without blocking other tasks.
+
+Threading in Python
+- Threading in Python is concurrent, but not parallel due to GIL.
+- Doesn't really save time over doing it one by one.
+- Best when you have multiple tasks that rely on each other to be happening at once.
+- Bad for CPU heavy operations because it is NOT parallel.
+- Not great in Python for a lot of things because it just adds complexity without a real speed up.
+
+Multiprocessing in Python
+- If you want true parallelism, this is the way.
+- Great for speeding up CPU heavy tasks.
+- Two libraries: Multiprocessing and Ray.
+- Massive speed increase
+- Can get complicated really fast
+- Hard to debug
+
+Async in Python
+- One of the most commonly used concurrency methods in web dev
+- Good for web scraping, db queries, just about everything that doesn't require parallelism.
+- Very bad for CPU heavy tasks.
+

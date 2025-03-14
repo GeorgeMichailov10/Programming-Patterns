@@ -1,4 +1,4 @@
-# Querying database
+# Querying a database example
 
 import asyncio
 
@@ -8,23 +8,24 @@ async def simulate_db_query(id):
             2: 'robert',
             3: 'zlatko'
         }
-
-    # Simulate delay
+    
     await asyncio.sleep(1)
     return objs[id]
 
+
 async def demonstrate_async():
     id = 1
-    # Make query first async so that data is here when we need it
+
+    # Goal: We want to do some stuff unrelated to the db query, query the db, print the result.
+    # Make query first
     query_task = asyncio.create_task(simulate_db_query(id))
 
-    # Simulate some sort of logic
+    # Simulate performing logic
     for i in range(5):
         await asyncio.sleep(0.05)
 
-    # Make sure to now await the query (have to make sure it exists)
+    # Make sure to now wait to get the result
     name = await query_task
     print(name)
 
 asyncio.run(demonstrate_async())
-

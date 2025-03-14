@@ -19,5 +19,3 @@ for i in range(4):
 print(f"Execution time: {time.time() - start:.2f} seconds")
 
 # Play around with large counting value. Delay comes from the instantiation of ray
-
-
