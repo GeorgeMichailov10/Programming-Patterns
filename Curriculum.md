@@ -42,7 +42,7 @@
 ## C++
 24. Basic memory management, pointers, references
 25. Advanced memory: Custom memory allocators (Pool, stack, arena collection), cache optimization, data-oriented design
-26. Performance optimization and valgind, move semantics
+26. Performance optimization and valgrind, move semantics
 27. Concurrency in C++ (threads, fork, mutexes, semaphores)
 28. Interprocess communication, boost
 29. Socket Programming
