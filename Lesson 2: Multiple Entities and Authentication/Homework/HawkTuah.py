@@ -147,6 +147,7 @@ def delete_user(username):
     pass
 
 # Add a user's note
+## FINISHED
 @app.route('/note', methods=['POST'])
 @middleware
 def add_note(username):
@@ -185,6 +186,7 @@ def add_note(username):
         return jsonify({"error" : str(e)}), 500
 
 # Get a note
+## NEED TO DO
 @app.route('/note', methods=['GET'])
 @middleware
 def get_note(username):
@@ -203,6 +205,7 @@ def get_note(username):
         return jsonify({"error" : str(e)}), 500
 
 # Updating a user's note
+## NEED TO DO
 @app.route('/note', methods=['PUT'])
 @middleware
 def update_note(username):
@@ -221,6 +224,7 @@ def update_note(username):
         return jsonify({"error" : str(e)}), 500
 
 # Deleting a note
+## NEED TO DO
 @app.route('/note', methods=['DELETE'])
 @middleware
 def delete_note(username):
