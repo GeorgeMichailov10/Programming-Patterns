@@ -22,3 +22,4 @@ Multiprocessing, for the same reason as #2.
 5. Interacting with an external API, processing the data, and storing the results in a db.
 
 Threading, because it works within same process, so there will be shared state, memory, and resources
+Correct: Async, then single/multi threaded/processed, then async again
