@@ -3,7 +3,7 @@
 #### Components
 
 ##### Layers
-- Composed of layers of neurons. The input vector into each layer = 1 x number of neurons in previous vector. Output is 1 x number of neurons in this vector.
+- Composed of layers of neurons. The input vector into each layer = 1 x number of neurons in previous layer. Output is 1 x number of neurons in this layer.
 - the input layer is where the data is inputted. The number of neurons is equal to the dimensions of the input vector.
 - All of the internal layers are called hidden layers. This is where the calculations occur.
 - The final layer is called the output layer. The number of neurons in this layer is equal to the number of output classes (or 1 if is continuous instead of discrete).
